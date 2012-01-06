@@ -1,0 +1,39 @@
+Script started on Mon 25 Apr 2011 03:13:34 PM CDT
+ag138380@ada:~/programming/compilers/bingo$ ls
+[00m[00mbingo.adb[00m  [00mbingo.ads[00m  [00mdriver.adb[00m  [00mrun_bingo.txt[00m
+[mag138380@ada:~/programming/compilers/bingo$ gnatmake driver.adb [K
+gcc -c driver.adb
+gcc -c bingo.adb
+gnatbind -x driver.ali
+gnatlink driver.ali
+ag138380@ada:~/programming/compilers/bingo$ ./driver 
+Hello, Welcome to Bingo.
+          B          I          N          G          O
+       ----------------------------------------------------
+          4          8         12         16         20 
+          6         12         18         24         30 
+          5         10         15*         20         25 
+          9         18         27         36         45 
+         11         22         33         44         55 
+ 
+Mark the card cells.
+Enter the column character: B
+Enter the row number: 1
+Enter the column character: I
+Enter the row number: 2
+Enter the column character: N
+Enter the row number: 3
+Enter the column character: G
+Enter the row number: 4
+Enter the column character: O
+Enter the row number: 4 5
+          B          I          N          G          O
+       ----------------------------------------------------
+          4*          8         12         16         20 
+          6         12*         18         24         30 
+          5         10         15*         20         25 
+          9         18         27         36*         45 
+         11         22         33         44         55* 
+ag138380@ada:~/programming/compilers/bingo$ exit
+
+Script done on Mon 25 Apr 2011 03:14:27 PM CDT

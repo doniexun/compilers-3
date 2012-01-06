@@ -1,0 +1,102 @@
+Script started on Thu 17 Mar 2011 03:59:24 PM CDT
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ls
+[00m[00mdriver.cpp[00m  [00mgrade.lanex[00m  [00mparser.y[00m  [00mscanner.lex[00m  [00mscan_parse.txt[00m
+[mag138380@ada:~/programming/compilers/lex_yacc_scanner$ lex scanner.lex
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ls
+[00m[00mdriver.cpp[00m  [00mgrade.lanex[00m  [00mlex.yy.c[00m  [00mparser.y[00m  [00mscanner.lex[00m  [00mscan_parse.txt[00m
+[mag138380@ada:~/programming/compilers/lex_yacc_scanner$ c++ driver.cpp
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ./a.out<grade.lanex [K
+program        	1
+grade          	24
+input          	2
+exam1          	24
+;              	23
+input          	2
+exam2          	24
+;              	23
+input          	2
+n              	24
+;              	23
+sum            	24
+=              	14
+0              	25
+;              	23
+num            	24
+=              	14
+1              	25
+;              	23
+size           	24
+=              	14
+1.             	26
+;              	23
+avg            	24
+=              	14
+(              	20
+exam1          	24
++              	9
+exam2          	24
+)              	21
+/              	12
+2.             	26
+;              	23
+if             	5
+(              	20
+exam1          	24
+<=             	17
+exam2          	24
+)              	21
+output         	3
+exam1          	24
+;              	23
+else           	6
+output         	3
+exam2          	24
+;              	23
+loop           	7
+n              	24
+times          	8
+sum            	24
+=              	14
+sum            	24
++              	9
+num            	24
+;              	23
+num            	24
+=              	14
+num            	24
++              	9
+1              	25
+;              	23
+end            	4
+;              	23
+output         	3
+sum            	24
+;              	23
+end            	4
+;              	23
+EOF 
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ls
+[00m[01;32ma.out[00m  [00mdriver.cpp[00m  [00mgrade.lanex[00m  [00mlex.yy.c[00m  [00mparser.y[00m  [00mscanner.lex[00m  [00mscan_parse.txt[00m
+[mag138380@ada:~/programming/compilers/lex_yacc_scanner$ bison parser.y
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ls
+[00m[01;32ma.out[00m  [00mdriver.cpp[00m  [00mgrade.lanex[00m  [00mlex.yy.c[00m  [00mparser.tab.c[00m  [00mparser.y[00m  [00mscanner.lex[00m  [00mscan_parse.txt[00m
+[mag138380@ada:~/programming/compilers/lex_yacc_scanner$ cc parser.tab.c -o parser
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ./parser<grade.lanex [K
+Parsing complete, no syntax errors! 
+syntax error near 
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ./parser
+program demo
+input a
+input b;
+syntax error near input
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ ./parser
+program demo
+input a;
+input b;
+c=a*b;
+output c;
+end;
+Parsing complete, no syntax errors! 
+ag138380@ada:~/programming/compilers/lex_yacc_scanner$ exit
+
+Script done on Thu 17 Mar 2011 04:03:48 PM CDT

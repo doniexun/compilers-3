@@ -1,0 +1,21 @@
+// A program in LanEx to calculate average of 2 exams
+// 	and also find the higher score of 2 exams.
+program grade
+	input exam1;
+	input exam2;
+	input n;
+	sum=0;
+	num=1;
+	size=1.;
+	avg=(exam1+exam2)/2.;
+	-- Finding the higher score of the two exams
+	if(exam1<=exam2)
+		output exam1;
+	else
+		output exam2;
+	loop n times
+		sum=sum+num;
+		num=num+1;
+	end;
+	output sum;
+end;

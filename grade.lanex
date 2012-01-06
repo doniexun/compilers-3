@@ -1,0 +1,5 @@
+// A program in LanEx to calculate average of 2 exams.
+program grade
+	input exam1, exam2;
+	avg=(exam1+exam2)/2.;
+end ?;

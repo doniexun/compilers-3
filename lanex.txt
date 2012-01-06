@@ -1,0 +1,33 @@
+Script started on Tue 01 Mar 2011 11:25:01 AM CST
+ag138380@ada:~/programming/compilers$ ls
+[00m[01;32ma.out[00m  [00mgrade.lanex[00m  [00mlanex.txt[00m  [00mscanner.cpp[00m
+[mag138380@ada:~/programming/compilers$ c++ scanner.cpp 
+ag138380@ada:~/programming/compilers$ cat grade.lanex 
+// A program in LanEx to calculate average of 2 exams.
+program grade
+	input exam1, exam2;
+	avg=(exam1+exam2)/2.;
+end ?;
+ag138380@ada:~/programming/compilers$ cat grade.lanex ++ scanner.cpp ls[KTue Mar  1 10:43:29 CST 2011exit[K./a.out>>grade.lanex<<grade.lanex>>grade.lanexexit[KTue Mar  1 10:43:29 CST 2011ls[Kc++ scanner.cpp at grade.lanex [K./a.out<grade.lanex 
+program        	1
+grade          	19
+input          	2
+exam1          	19
+,              	17
+exam2          	19
+;              	18
+avg            	19
+=              	14
+(              	15
+exam1          	19
++              	9
+exam2          	19
+)              	16
+/              	12
+2.; ERROR      	-1
+end            	4
+? ERROR        	-1
+;              	18
+ag138380@ada:~/programming/compilers$ exit
+
+Script done on Tue 01 Mar 2011 11:25:52 AM CST
