@@ -1,4 +1,4 @@
-// Ashim Ghimire - Project 1 - CS4223 Programming Lang/Compilers spring 2011
+// Ashim Ghimire - Programming Lang/Compilers
 
 // A lexical analyzer(scanner) for the experimental language LanEx.
 // FSA-based lexical analyzer to extract tokens from program.
