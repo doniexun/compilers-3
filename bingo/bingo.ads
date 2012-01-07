@@ -1,4 +1,4 @@
--- Ashim Ghimire - Prog Lang/Compilers CS4223 Spring 2011
+-- Ashim Ghimire - Prog Lang/Compilers
 -- bingo.ads : package specification (declarations of procedures)
 
 package bingo is
